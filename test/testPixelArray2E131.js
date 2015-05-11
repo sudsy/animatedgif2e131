@@ -7,7 +7,7 @@ var sinon = require("sinon");
 
 describe('When sending a one pixel white array',function(){
 
-	var PixelArraytoE131 = require("../lib/PixelArraytoE131.js");
+	var PixelArraytoE131 = require("../lib/PixelArray2E131.js");
 	var output;
 
 
@@ -42,7 +42,7 @@ describe('When sending a one pixel white array',function(){
 });
 
 describe('When sending a one pixel black canvas',function(){
-	var PixelArraytoE131 = require("../lib/PixelArraytoE131.js");
+	var PixelArraytoE131 = require("../lib/PixelArray2E131.js");
 	var output;
 
 
@@ -76,7 +76,7 @@ describe('When sending a one pixel black canvas',function(){
 });
 
 describe('When sending a one pixel red canvas',function(){
-	var PixelArraytoE131 = require("../lib/PixelArraytoE131.js");
+	var PixelArraytoE131 = require("../lib/PixelArray2E131.js");
 	var output;
 
 
@@ -109,7 +109,7 @@ describe('When sending a one pixel red canvas',function(){
 });
 
 describe('When sending a one pixel green canvas',function(){
-	var PixelArraytoE131 = require("../lib/PixelArraytoE131.js");
+	var PixelArraytoE131 = require("../lib/PixelArray2E131.js");
 	var output;
 
 
@@ -143,7 +143,7 @@ describe('When sending a one pixel green canvas',function(){
 });
 
 describe('When sending a one pixel blue canvas',function(){
-	var PixelArraytoE131 = require("../lib/PixelArraytoE131.js");
+	var PixelArraytoE131 = require("../lib/PixelArray2E131.js");
 	var output;
 
 
@@ -176,7 +176,7 @@ describe('When sending a one pixel blue canvas',function(){
 });
 
 describe('When sending a one pixel transparent white canvas',function(){
-	var PixelArraytoE131 = require("../lib/PixelArraytoE131.js");
+	var PixelArraytoE131 = require("../lib/PixelArray2E131.js");
 	var output;
 
 
@@ -210,7 +210,7 @@ describe('When sending a one pixel transparent white canvas',function(){
 });
 
 describe('When sending a one pixel half transparent white canvas',function(){
-	var PixelArraytoE131 = require("../lib/PixelArraytoE131.js");
+	var PixelArraytoE131 = require("../lib/PixelArray2E131.js");
 	var output;
 
 
@@ -245,7 +245,7 @@ describe('When sending a one pixel half transparent white canvas',function(){
 describe('When sending a 4 pixel canvas with each pixel different colours',function(){
 
 
-	var PixelArraytoE131 = require("../lib/PixelArraytoE131.js");
+	var PixelArraytoE131 = require("../lib/PixelArray2E131.js");
 	var output;
 
 
@@ -294,7 +294,7 @@ describe('When sending a 4 pixel canvas with each pixel different colours',funct
 describe('When sending a 4 pixel canvas with each pixel different colours to a gray cols mapping function',function(){
 
 
-	var PixelArraytoE131 = require("../lib/PixelArraytoE131.js");
+	var PixelArraytoE131 = require("../lib/PixelArray2E131.js");
 	var output;
 
 
@@ -335,7 +335,7 @@ describe('When sending a 4 pixel canvas with each pixel different colours to a g
 describe('When sending a 16 by 16 pixel canvas with a single white pixel',function(){
 
 
-	var PixelArraytoE131 = require("../lib/PixelArraytoE131.js");
+	var PixelArraytoE131 = require("../lib/PixelArray2E131.js");
 	var output;
 
 
@@ -382,7 +382,7 @@ describe('When sending a 16 by 16 pixel canvas with a single white pixel',functi
 });
 
 describe('When sending a 48 by 50 pixel canvas ',function(){
-	var PixelArraytoE131 = require("../lib/PixelArraytoE131.js");
+	var PixelArraytoE131 = require("../lib/PixelArray2E131.js");
 	var output;
 
 	var start;
