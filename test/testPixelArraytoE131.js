@@ -291,6 +291,47 @@ describe('When sending a 4 pixel canvas with each pixel different colours',funct
 
 });
 
+describe('When sending a 4 pixel canvas with each pixel different colours to a gray cols mapping function',function(){
+
+
+	var PixelArraytoE131 = require("../lib/PixelArraytoE131.js");
+	var output;
+
+
+	before(function(){
+
+		var pixelArray = [255,255,255,255,255,0,0,255,0,0,0,255,255,255,255,127]
+
+		output = new PixelArraytoE131({arrayWidth : 2, arrayHeight : 2}, require("../lib/mapping/grycols.js"));
+		output.controller.setChannel = sinon.spy();
+		output.send(pixelArray);
+		output.close();
+		// Remember default is snake cabling
+	});
+
+	it('controller setChannel should be called with first channelgroup white',function(){
+
+	 	should(output.controller.setChannel.calledWith(1,1,255)).ok;
+	});
+
+	it('controller setChannel should be called with second channelgroup black',function(){
+
+	 	should(output.controller.setChannel.calledWith(1,2,0)).ok;
+	});
+
+	it('controller setChannel should be called with third channelgroup grey',function(){
+
+	 	should(output.controller.setChannel.calledWith(1,3,85)).ok;
+	});
+
+	it('controller setChannel should be called with forth channelgroup mid grey because of transparency',function(){
+
+	 	should(output.controller.setChannel.calledWith(1,4,127)).ok;
+	});
+
+
+});
+
 describe('When sending a 16 by 16 pixel canvas with a single white pixel',function(){
 
 
@@ -354,7 +395,7 @@ describe('When sending a 48 by 50 pixel canvas ',function(){
 
 
 		output = new PixelArraytoE131({arrayWidth : 48, arrayHeight : 50});
-		
+
 		start = new Date().getTime();
 		output.send(pixelArray);
 		end = new Date().getTime();
