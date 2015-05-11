@@ -6,13 +6,14 @@
   "scripts": {
     "test": "make test"
   },
-  "homepage": "https://github.com/sudsy/canvastoE131",
+  "homepage": "https://github.com/sudsy/animatedgif2E131",
   "repository": {
-    "url": "git@github.com:sudsy/canvastoE131.git"
+    "url": "git@github.com:sudsy/animatedgif2E131.git"
   },
   "dependencies": {
     "node-e131": "*",
-    "omggif": "^1.0.5"
+    "omggif": "^1.0.5",
+    "pixelarray2e131": "0.0.1"
   },
   "devDependencies": {
     "mocha": "*",
