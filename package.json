@@ -1,7 +1,7 @@
 {
-  "name": "canvastoe131",
-  "version": "0.0.3",
-  "description": "Send an image or animation from a canvas to a pixel array over streaming ACN E1.31",
+  "name": "animatedgif2e131",
+  "version": "0.0.1",
+  "description": "Send an animated gif to a pixel array over streaming ACN E1.31",
   "main": "index.js",
   "scripts": {
     "test": "make test"
@@ -10,23 +10,23 @@
   "repository": {
     "url": "git@github.com:sudsy/canvastoE131.git"
   },
-  "dependencies":{
-    "node-e131" : "*"
+  "dependencies": {
+    "node-e131": "*",
+    "omggif": "^1.0.5"
   },
-  "devDependencies":{
-    "canvas" : "*",
-    "mocha" : "*",
-    "should" : "*",
-    "sinon" : "*",
-    "debug" : "*"
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*",
+    "sinon": "*",
+    "debug": "*"
   },
   "keywords": [
     "sAcn",
     "E1.31",
     "canvas",
-    "dmx", 
+    "dmx",
     "e131",
-    "acn", 
+    "acn",
     "LED"
   ],
   "author": "Ben Sudbury [sudsy] (http://lighthouselogic.com)",
