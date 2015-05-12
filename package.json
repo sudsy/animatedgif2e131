@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Send an animated gif to a pixel array over streaming ACN E1.31",
   "main": "index.js",
+  "bin": "./bin/animatedgif2e131.js",
   "scripts": {
     "test": "make test"
   },
@@ -11,9 +12,10 @@
     "url": "git@github.com:sudsy/animatedgif2E131.git"
   },
   "dependencies": {
-    "node-e131": "*",
-    "omggif": "^1.0.5",
-    "pixelarray2e131": "0.0.1"
+    "commander": "^2.8.1",
+    "node-e131": "^0.0.2",
+    "omggif": "^1.0.6",
+    "pixelarray2e131": "^0.0.1"
   },
   "devDependencies": {
     "mocha": "*",

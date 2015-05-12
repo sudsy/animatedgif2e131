@@ -1,44 +1,50 @@
-#Canvas to E1.31
+#Animated Gif to E1.31
 
-This module lets you control lights by drawing on a canvas. It was designed primarily for a grid of led strips. You can create animations by painting to the canvas in a loop and sending the output with this module. While node-canvas is not a dependency of the module, you will need to pass an instance of node-canvas to this module.
+This module lets you control lights by sending video output in the form of an animated gif. It was designed primarily for a grid of led strips.
 
 ##Features
-* Use your favourite graphics library to draw to the canvas and then output to sAcn (E1.31)
+* Use your favourite video editing software to create a video, convert it to an animated gif and then output to sAcn (E1.31)
 * Choose different sections of the canvas to output to different lighting fixtures
 * Supports common snaked cabling by default - supply a function to map in whatever way you like
-* Includes a comprehencive test suite
+* Includes a comprehensive test suite
 
 ##Usage
-A number of examples are included in the examples directory including a simple animation. A very basic example follows:
 
-```javascript
-// sendSimple.js
+Command Line
 
-var Canvas = require("canvas");
-var CanvastoE131 = require("canvastoe131");
+```bash
+Usage: animatedgif2e131 [options] <file>
 
-var canvas = new Canvas(10,10);
+ Options:
 
-//create a simple canvas with an image on it
-var context = canvas.getContext('2d');
-context.fillStyle="white";
-context.fillRect(0,0,10,10);
-
-
-// connect the canvas to the sender with mapping
-var output = new CanvastoE131(canvas, {host: "10.1.1.5"});
-
-
-output.send();
-
-
-process.on ("SIGINT", function(){
-    output.close();
-    process.exit(1);
-});
-
+   -h, --help             output usage information
+   -V, --version          output the version number
+   -h, --host <value>     hostname or ip address
+   -p, --port <n>         port
+   -f --fps <n>           frames per second
+   -m, --mapping <value>  mapping function - snake, rows, gryCols
 
 ```
 
+The tool can also be accessed through it's api. For Example:
 
- 
+```javascript
+var AnimatedGif2E131 = require("animatedgif2e131");
+
+var fs = require("fs");
+
+var options = {
+  "port" : 5568,
+  "host" : "127.0.0.1"
+};
+
+var buf = fs.readFileSync("myfile.gif");
+
+var mappingFunction = AnimatedGif2E131.mapping.cols;
+
+var theGif = new AnimatedGif2E131(buf, options, mappingFunction);
+
+var fps = 25;
+
+theGif.startAnimation(fps);
+```

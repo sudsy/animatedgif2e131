@@ -5,7 +5,7 @@ var sinon = require("sinon");
 
 describe('When loading the test gif image',function(){
 
-  var AnimatedGif2E131 = require('../lib/AnimatedGif2E131.js');
+  var AnimatedGif2E131 = require('../');
   var thisGif;
 
   before(function(){

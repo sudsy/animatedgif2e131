@@ -1,11 +1,9 @@
 // index.js
 
-var CanvastoE131 = require("./lib/CanvastoE131.js");
+var AnimatedGif2E131 = require("./lib/AnimatedGif2E131.js");
 
-CanvastoE131.mapping = {
-	rows : require("./lib/mapping/rows.js"),
-	snake : require("./lib/mapping/snake.js"),
-	flipDiagonalFunction : require("./lib/mapping/flipDiagonalFunction.js")
-};
+var PixelArraytoE131 = require("pixelarray2e131");
 
-module.exports = CanvastoE131;
+AnimatedGif2E131.mapping = PixelArraytoE131.mapping;
+
+module.exports = AnimatedGif2E131;
