@@ -4,7 +4,6 @@ This module lets you control lights by sending video output in the form of an an
 
 ##Features
 * Use your favourite video editing software to create a video, convert it to an animated gif and then output to sAcn (E1.31)
-* Choose different sections of the canvas to output to different lighting fixtures
 * Supports common snaked cabling by default - supply a function to map in whatever way you like
 * Includes a comprehensive test suite
 
