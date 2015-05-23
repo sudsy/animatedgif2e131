@@ -1,6 +1,6 @@
 {
   "name": "animatedgif2e131",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Send an animated gif to a pixel array over streaming ACN E1.31",
   "main": "index.js",
   "bin": "./bin/animatedgif2e131.js",
