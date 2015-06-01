@@ -20,8 +20,9 @@ Usage: animatedgif2e131 [options] <file>
    -V, --version          output the version number
    -h, --host <value>     hostname or ip address
    -p, --port <n>         port
-   -f --fps <n>           frames per second
+   -f, --fps <n>           frames per second
    -m, --mapping <value>  mapping function - snake, rows, gryCols
+   -i, --interactive      interactive mode. Allows pausing and restarting of display from prompt
 
 ```
 
