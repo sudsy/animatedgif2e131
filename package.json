@@ -1,6 +1,6 @@
 {
   "name": "animatedgif2e131",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Send an animated gif to a pixel array over streaming ACN E1.31",
   "main": "index.js",
   "bin": "./bin/animatedgif2e131.js",
@@ -16,7 +16,7 @@
     "inquirer": "^0.8.5",
     "node-e131": "^0.0.2",
     "omggif": "^1.0.6",
-    "pixelarray2e131": "^0.0.1"
+    "pixelarray2e131": "^0.0.2"
   },
   "devDependencies": {
     "mocha": "*",
